@@ -55,6 +55,7 @@ class BuildScripts(build_scripts):
         architecture = 32
         if plat.startswith('darwin'):
             os_ = 'mac'
+            architecture = platform.architecture()[0][:-3]
         elif plat.startswith('linux'):
             os_ = 'linux'
             architecture = platform.architecture()[0][:-3]
